@@ -22,7 +22,8 @@ defmodule Weather.MixProject do
   defp deps do
     [
       {:httpoison, "~> 1.0"},
-      {:sweet_xml, ">0.0.0"}
+      {:sweet_xml, ">0.0.0"},
+      { :ex_doc, "~> 0.18.1" }
     ]
   end
 end

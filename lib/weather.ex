@@ -4,23 +4,16 @@ defmodule Weather do
 
   @w1_url Application.get_env(:weather, :w1_url)
 
-  # @moduledoc """
-  # Documentation for Weather.
-  # """
-  #
-  # @doc """
-  # Hello world.
-  #
-  # ## Examples
-  #
-  #     iex> Weather.hello
-  #     :world
-  #
-  # """
-  # def hello do
-  #   :world
-  # end
+  @moduledoc """
+  Simple application to print weather data from w1 xml feed
+  """
 
+  @doc """
+  prtins the data
+
+  ## Examples
+      iex> Weather.details
+  """
   def details do
     HTTPoison.get(@w1_url)
     |> handle_response
